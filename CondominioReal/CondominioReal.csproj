@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{208E8ED6-D755-4326-BB0F-1F2179BA7B71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CondominioReal</RootNamespace>
+    <AssemblyName>CondominioReal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.3.5\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BDConexion.cs" />
+    <Compile Include="Bloque_Piso.cs" />
+    <Compile Include="Departamento.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsiganacionHabitante_Departamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsiganacionHabitante_Departamento.Designer.cs">
+      <DependentUpon>frmAsiganacionHabitante_Departamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsiganarServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsiganarServicios.Designer.cs">
+      <DependentUpon>frmAsiganarServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendario.Designer.cs">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExpensas.Designer.cs">
+      <DependentUpon>frmExpensas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarBloque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarBloque.Designer.cs">
+      <DependentUpon>frmGestionarBloque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarHabitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarHabitante.Designer.cs">
+      <DependentUpon>frmGestionarHabitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeValido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeValido.Designer.cs">
+      <DependentUpon>frmHomeValido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIniciarSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIniciarSession.Designer.cs">
+      <DependentUpon>frmIniciarSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMultimedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMultimedia.Designer.cs">
+      <DependentUpon>frmMultimedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarHabitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarHabitante.Designer.cs">
+      <DependentUpon>frmRegistrarHabitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicios.Designer.cs">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarBloque_Pisos.cs" />
+    <Compile Include="GestionarDepartamento.cs" />
+    <Compile Include="GestionarExpensas.cs" />
+    <Compile Include="GestionarHabitante.cs" />
+    <Compile Include="GestionarServicios.cs" />
+    <Compile Include="Habitante.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios.cs" />
+    <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsiganacionHabitante_Departamento.resx">
+      <DependentUpon>frmAsiganacionHabitante_Departamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsiganarServicios.resx">
+      <DependentUpon>frmAsiganarServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalendario.resx">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExpensas.resx">
+      <DependentUpon>frmExpensas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarBloque.resx">
+      <DependentUpon>frmGestionarBloque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarHabitante.resx">
+      <DependentUpon>frmGestionarHabitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeValido.resx">
+      <DependentUpon>frmHomeValido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIniciarSession.resx">
+      <DependentUpon>frmIniciarSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMultimedia.resx">
+      <DependentUpon>frmMultimedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarHabitante.resx">
+      <DependentUpon>frmRegistrarHabitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServicios.resx">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Img\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
